@@ -1,0 +1,8 @@
+If you have a your own collection of text files that you would like to access using the
+methods discussed earlier, you can easily load them with the help of NLTK’s Plain
+textCorpusReader. Check the location of your files on your file system; in the following
+example, we have taken this to be the directory /usr/share/dict. Whatever the location,
+set this to be the value of corpus_root . The second parameter of the PlaintextCor
+pusReader initializer can be a list of fileids, like ['a.txt', 'test/b.txt'], or a pattern
+that matches all fileids, like '[abc]/.*\.txt' (see Section 3.4 for information about
+regular expressions).

@@ -1,0 +1,150 @@
+1. NLTK ( Natural Language Took Kit ) : Python Library for NLP (Natural Language Processing)
+
+2. NLP ( Natural Language Processing ) : Field of study that incorporates Linguistics, Computer science and Ai,
+Concerned with the interactions between computers and human language.
+
+3. Amazing applications : Smart Assistants (ALEXA, GOOGLE ASSISTANT, etc), Search Results in browser,
+Predictive Text (Auto correct, Auto Complete), Language translation. etc.
+
+4. How to use NLTK :
+                    import nltk
+                    from nltk import *
+
+
+5. How to view samples of datasets in NLTK :
+                    1. Books/texts/sents : from nltk.book import *
+                    2. Corpus            : from nltk.corpus import *
+
+6. How to Search Text? :
+            text1.concordance("Text-To-Match")
+
+7. Concordance : A concordance view shows us every occurrence of a given word, together with some context
+
+8. How to find text similar to one we have ? :
+            text1.similar("Text-To-Match")
+
+9. How to find and visualize most occuring words in texts :
+            using "nltk.FreqDist(text)" to find,
+            using "nltk.FreqDist(text).plot()" to visualize.
+
+10. Low frequency Words (hapaxes) and how to find them :
+            using "nltk.FreqDist(text1).hapaxes()" to find,
+
+11. High frequency Words (without context - Stopwords, with context - sight words) :
+            using "nltk.FreqDist(text).most_common(10)" for top 10 frequent words in text.
+
+12. Token : A token is the technical name for a sequence of characters — such as hairy, his, or :).
+
+13. Collocations : A collocation is a sequence of words that occur together unusually often. Thus red wine is a collocation.
+                use "text.collocations()"
+
+14. Bigram : List of word pairs.
+                use "list(bigrams(text)"
+
+15. Trigram : List of 3 words.
+                use "list(nltk.trigrams(text1))"
+
+16. N-gram : list of n words.
+                use "list(nltk.ngrams(text1, n))"
+
+17. Corpora / Corpus : large bodies of linguistic data.
+
+18. All Corpus in NLTK :
+            1. Gutenberg Corpus
+            2. Web Text
+            3. Chat Text
+            4. Renters Corpus
+            5. Brown Corpus
+            6. Inaugural Address Corpus
+            7. Annotated Text Corpora
+            8. Other Languages Corpora
+            9. Own Corpus
+
+        * Methods :
+            >> corpusImportName.fileids() # lists names of field texts in some formated like .txt or .xml.
+            >> corpusImportName.raw(corpusImportName.fileids()[0]) # Displays raw texts in 1st book.
+            >> corpusImportName.words(corpusImportName.fileids()[0]) # Displays lists of words of texts in 1st book.
+            >> corpusImportName.sents(corpusImportName.fileids()[0]) # Displays nested list of sentence and words in 1st book.
+            >> corpusImportName.paras(corpusImportName.fileids()[0]) # Displays Double nested list of paragraphs, sentences and words in 1st book.
+
+        1. Gutenberg Corpus :
+            * How to Import : >> from nltk.corpus import gutenberg
+            * Structure :
+                        >> gutenberg.fileids() # lists and contains names of 18 text books in .txt form
+                        >> gutenberg.raw(gutenberg.fileids()[0]) # Displays raw texts in 1st book.
+                        >> gutenberg.words(gutenberg.fileids()[0]) # Displays lists of words of texts in 1st book.
+                        >> gutenberg.sents(gutenberg.fileids()[0]) # Displays nested list of sentence and words in 1st book.
+                        >> gutenberg.paras(gutenberg.fileids()[0]) # Displays Double nested list of paragraphs, sentences and words in 1st book.
+
+        2. Web Text :
+            * How to Import : >> from nltk.corpus import webtext
+            * Structure :
+                        >> webtext.fileids() # Lists 6 txt files names
+
+        3. Chat Text :
+            * How to import : >> from nltk.corpus import nps_chat
+            * Structure :
+                        >> nps_chat.fileids() # Lists 15 xml files names
+
+        4. Renters Corpus :
+            * How to Import : >>  from nltk.corpus import reuters
+            * Structure :
+                        >> reuters.fileids() # Lists 10788 Test and Training files.
+                        >> reuters.categories() # List 90 different categories of texts.
+
+        5. Brown Corpus :
+            * How to Import : >> from nltk.corpus import brown
+            * Structure :
+                        >> brown.fileids() # Lists 500 files
+                        >> brown.categories() # Lists 15 types of categories/genres
+                        >> brown.tagged_words() # Lists POS Tag for every words as tuples
+                        >> brown.tagged_sents() # Nested Lists POS Tag every words as tuple
+                        >> brown.tagged_paras() # Double Nested Lists POS Tag every words as tuple
+
+        6. Inaugural Address Corpus :
+            * How to Import : >> from nltk.corpus import inaugural
+            * Structure :
+                        >> inaugural.fileids() # Lists 59 txt files names
+
+        7. Annotated Text Corpora :
+            * Number of All Corpora in Nltk : Nearly 150
+            * Import as : >> from nltk import corpus
+
+        8. Other Languages Corpora :
+            * nltk.corpus.cess_esp.words() # for list of spanish words
+            * nltk.corpus.floresta.words() # for lists french words
+            * nltk.corpus.indian.fileids() # for list of 4 indian Languages
+            * nltk.corpus.udhr.fileids() # for list of 310 other languages
+
+        9. Own Corpus :
+            * How to Import : >> from nltk.corpus import PlaintextCorpusReader
+            * Structure :
+                        >> PlaintextCorpusReader(file) # To read file from location in our local computer
+
+19. Pronouncing Dictionary : NLTK includes the CMU Pronouncing Dictionary
+            for U.S. English, which was designed for use by speech synthesizers.
+            * Usage :
+                    >> nltk.corpus.cmudict.entries()
+
+20. Swadesh wordlists : NLTK includes so-called Swadesh wordlists, lists of about 200 common words in several languages.
+            * Usage :
+                    >> from nltk.corpus import swadesh
+                    >> swadesh.fileids() # for listing language options
+                    >> swadesh.words('en') # for listing all words in English
+                    >> fr2en = dict(swadesh.entries(['fr', 'en']) # for french to english translations.
+
+
+21.
+
+
+
+
+
+
+
+
+
+
+
+
+
